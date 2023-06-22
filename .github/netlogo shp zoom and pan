@@ -1,0 +1,16 @@
+extensıons [gis]
+globals [area]
+
+to setup
+  clear-all
+  gis:load-coordinate-system "D:/workspace/yol1.prj"
+  set area gis:load-dataset "D:/workspace/yol1.shp"
+  gis:set-world-envelope-ds gis:envelope-of area
+
+  gis:set-drawing-color red
+  gis:draw area 1
+
+end
+
+
+I uploaded my shp extension file with this code block. How can I add zoom and pan feature to this file in netlogo?
